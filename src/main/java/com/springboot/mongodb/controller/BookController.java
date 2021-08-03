@@ -16,14 +16,14 @@ public class BookController {
 	
 	@Autowired
 	private BookRepository bookRepository;
-	
+	//add request
 	@PostMapping("/addBook")
 	public String saveBook(@RequestBody Book book) {
 		
 		bookRepository.save(book);
 		return "Added successfully";
 	}
-	
+	//get request
 	@GetMapping("/getBooks")
 	public List<Book> getAllBooks(){
 		return bookRepository.findAll();
