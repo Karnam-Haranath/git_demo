@@ -12,6 +12,7 @@ import lombok.ToString;
 @ToString
 
 @Document(collection = "Book")
+//added comments
 public class Book {
 	@Id
 	private int id;
